@@ -1,0 +1,321 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   font-family:monospace;
+
+}
+::before , ::after{
+    padding:0;
+    margin:0;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: slide linear infinite 25s ;
+    transition-duration: 0.7s;
+    background-image: url('https://taytou.com/wp-content/uploads/2022/10/May-xanh-va-trang-co-con-dieu-Hinh-nen-de-thuong-2.jpg');
+}
+.container{
+    height:500px;
+    width:300px;
+   position: relative;
+   border-radius: 7px;
+   background:linear-gradient(#b5f0ea,#dbd5d3);
+   color:white;
+   box-shadow: 0px 6px 20px rgb(151, 215, 209);
+   animation: modalIn 0.1s ease-in;
+}
+
+.nar-span{
+    font-size:15px;
+    font-weight: 550;
+}
+.nar-heart{
+    font-size:20px;
+}
+.nar-plus{
+    font-size:20px;
+}
+.nar-bar{
+    display:flex;
+    justify-content: space-around;
+    padding:17px 0px;
+}
+.music-img{
+  width:230px;
+  height: 230px;
+  overflow:hidden;
+  border-radius:50%;
+  margin: auto;
+  box-shadow: 0 0px 0px rgb(241, 239, 239),
+  0 5px 20px rgb(224, 221, 172),
+  0 0px 20px rgb(211, 201, 236);
+}
+.music-img img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+.song-item{
+    padding-top:25px;
+    text-align: center;
+}
+.name-song{
+  font-size:15px;
+  font-weight: 550;
+}
+.name-singer{
+    margin-top:5px;
+    font-style:oblique;
+}
+.player-music{
+    width:250px;
+    margin: auto;
+}
+.croll-song{
+    height:5px;
+    width:100%;
+    background-color:rgb(239, 235, 235);
+    border-radius: 50px;
+    
+   margin-top: 20px;
+   cursor: pointer;
+}
+.croll-music{
+    width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #e6e4e4;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+  }
+  
+  .croll-music::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color:white;
+    cursor: pointer;
+  } 
+
+  .container .icon-pause {
+    display: none;
+  } 
+  
+  .playing .icon-pause {
+    display: inline-block;
+  }
+  
+  .playing .icon-play {
+    display: none;
+  } 
+  .btn-play{
+    display: none;
+  }
+  
+.song-timer{
+    margin-top:3px;
+    display:flex;
+    justify-content: space-between;
+}
+.song-controls{
+    display:flex;
+    justify-content:space-around;
+    margin-top: 40px;
+    cursor: pointer;
+    
+}
+.next-left, .player-song, .btn, .next-right{
+    font-size: 25px;
+}
+.song-repeat, .song-radom{
+    font-size: 18px;
+    margin-top: 5px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding:5px 0px  10px 0px;
+}
+.list-header{
+    display:flex;
+}
+.list-music{
+   height:400px; 
+    width:300px;
+   overflow: hidden;
+    position: absolute;
+    border-radius:10px 10px 5px 5px ;
+    background: linear-gradient(rgb(231, 186, 226),rgb(234, 212, 188));
+    list-style: none;
+    transition: all 0.1s ease-out;
+    z-index: 2;
+    display: none;
+    animation: modalFaceout ease 0.3s;
+    
+    
+}
+
+.list-music.show{
+    top:0;
+    opacity: 1;
+}
+.list-music .show{
+    bottom:0;
+    opacity: 1;
+}
+.list-li.active{
+    background:linear-gradient(#e5eeed,#f1dded);
+    color:rgb(236, 150, 221);
+}
+ul{
+    max-height:380px;
+    overflow:scroll;
+}
+ ul::-webkit-scrollbar{
+    width:0;
+}
+.list-li{
+    list-style: none;
+  padding:10px 5px;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.icon-list-tool{
+    font-size: 15px;
+    padding:10px 10px;
+}
+
+.icon-header{
+    font-size: 17px;
+    padding:10px 7px 0px 10px;
+}
+.span-header{
+    font-size: 15px;
+    padding:11px 7px 0px 5px;
+    position: fixed;
+}
+.close-item{
+    font-size: 20px;
+    padding:10px 17px 0px 7px;
+    cursor: pointer;
+}
+.list{
+    padding:0px;
+    cursor: pointer;
+}
+.song-p, .singer-p{
+    font-size:13px;
+    font-weight: 550;
+    font-style:unset;
+    padding-top:2.5px;
+  
+    
+}
+.list-li:hover{
+ background: linear-gradient(#e5eeed,#f1dded);
+ -webkit-text-fill-color: rgb(236, 150, 221);
+}
+.list-index{
+    font-size:15px;
+    font-weight: 600;
+    padding:10px;
+}
+.list-p{
+    display:flex;
+}
+.active{
+    color:rgb(79, 220, 211);
+}
+.hidden{
+    display:block;
+}
+.hide-song{
+    display:none;
+}
+
+.nar-plus{
+    cursor: pointer;
+}
+@keyframes modalFaceout
+{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes modalIn
+{
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slide {
+    50% {
+      background-position: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

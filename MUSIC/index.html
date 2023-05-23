@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="musicplayer.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Mucsic Player</title>
+</head>
+<body>
+   
+    <div class="container">
+        <div class="nar-bar">
+           <div class="nar-heart">
+            <i class="fa-solid fa-plus"></i>
+           </div>
+            <div>
+                <span class="nar-span">Now player</span>
+            </div> 
+            <div class="nar-plus">
+                <i class="fa-regular fa-heart"></i>
+                
+            </div>
+        </div>
+        <div class="music-container">
+                <div class="music-img">
+                    <img class="img-item" src="" alt="">
+                </div>
+            <div class="song-item">
+                <span class="name-song">Doi hoa mat troi</span>
+                <p class="name-singer">Hoang Yen ChiBi</p>
+            </div>
+        </div>
+     <div class="player-music">
+        <!-- <div class="croll-song">
+            <div class="music-audio">
+                <audio class="aduio-item" src=""></audio>
+    
+            </div>
+        </div> -->
+        <div class="croll-item">
+            <input class="croll-music" id="croll" type="range" value="0" step="1" min="0" max="100">
+        </div>
+        <audio class="song-audio" src="></audio>
+        <div class="song-timer">
+            <span class="song-current">0:00</span>
+            <span class="song-max">0:00</span>
+        </div>
+        <div class="song-controls">
+            <div class="song-repeat">
+                <i  class="fa-sharp fa-solid fa-repeat"></i>
+            </div>
+            <div class="next-left">
+                <i class="fas fa-step-backward"></i>
+            </div>
+            <div class="btn  ">
+                <i class="fas fa-pause icon-pause"></i>
+               
+                <i  class="fas fa-play icon-play"></i>
+              
+            </div>
+         
+         
+            <div class="next-right">
+                <i  class="fas fa-step-forward"></i>
+            </div>
+            <div class="song-radom">
+                <i class="fas fa-random"></i>
+            </div>
+        </div>
+     </div>
+    
+     <div class="list-music ">
+                <div class="list-song">
+                <div class="header">        
+                    <div class="list-header">
+                        <div class="icon-header">
+                            <i class="fa-sharp fa-solid fa-list-ul"></i>
+                            <span class="list-span">Music list</span>
+                        </div>
+                       
+                               
+                                </div>
+                                <div class="close-item">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div>
+                        </div>
+            <div class="playlist">
+                <ul class="list">
+                    
+                                    
+               </ul>
+              
+            </div>
+       </div>
+     
+     </div>
+    </div>
+    <script src="./music.js"></script>
+</body>
+</html>
